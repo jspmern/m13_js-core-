@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+let noteValue=Number(prompt('enter yr ammount'))
+  if(noteValue>2000)
+  {
+    let result=Math.trunc(noteValue/2000)
+    console.log('no of 2000 notes =',result)
+    noteValue=noteValue-(2000*result)
+  }
+  if(noteValue>500)
+  {
+    let result=Math.trunc(noteValue/500)
+    console.log('no of 500 notes =',result)
+    noteValue=noteValue-(500*result)
+  }
+  if(noteValue>100)
+  {
+    let result=Math.trunc(noteValue/100)
+    console.log('no of 100 notes =',result)
+    noteValue=noteValue-(100*result)
+  }
+  if(noteValue>50)
+  {
+    let result=Math.trunc(noteValue/50)
+    console.log('no of 50 notes =',result)
+    noteValue=noteValue-(50*result)
+  }
+
+     </script>
+</body>
+</html>

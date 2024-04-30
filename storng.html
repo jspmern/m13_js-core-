@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <!-- <script>
+        let no=145
+        let temp=no
+        let sum=0
+        while(no>0)
+        {
+            let rem=no%10
+            let fact=1
+            for(let i=1;i<=rem;i++)
+            {
+                 fact=fact*i
+            }
+             sum+=fact
+            no=Math.trunc(no/10)
+        }
+        if(temp==sum)
+        {
+            console.log('yes')
+        }
+        else{
+            console.log('no')
+        }
+      </script> -->
+      <script>
+        let count=1;
+        let sum=0
+        for(let i=1;i<=30;i++)
+        {
+            if(i%2!=0)
+            {
+                if(count%2!=0)
+                {
+                     sum+=i
+                    count++
+                }
+                else{
+                    count++
+                }
+            }
+        }
+        console.log(sum) 
+      </script>
+    </body>
+</html>

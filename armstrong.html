@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <h1>armstrong no</h1>
+       <script>
+        let no=153;
+        let temp=no
+        let sum=0
+        let len=no.toString().length;
+          while(no>0)
+          {
+           
+           rem=no%10
+           sum=sum+ Math.pow(rem,len)
+           no=Math.trunc(no/10)
+          }
+          if(sum==temp)
+          {
+            console.log('armstrong')
+          }
+          else{
+            console.log('no')
+          }
+       </script>
+</body>
+</html>

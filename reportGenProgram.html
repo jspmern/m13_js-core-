@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let math = 87;
+      let sci = 61;
+      let eng = 61;
+      let html = 61;
+      let css = 61;
+      if (math > 60 && sci > 60 && eng > 60 && html > 60 && css > 60) {
+        let avg = (math + sci + eng + html + css) / 5;
+        if (avg > 70) {
+          console.log("A+");
+        } else {
+          if (avg < 70 && avg > 45) {
+            console.log("b+");
+          } else {
+            console.log("c+");
+          }
+        }
+      } else {
+        console.log("you are fail");
+      }
+    </script>
+  </body>
+</html>
