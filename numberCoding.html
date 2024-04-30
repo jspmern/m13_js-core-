@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>hello number coding</h1>
+    <!-- <script>
+      //number printing in range
+      let start = 3;
+      let end = 30;
+      let isPrime = false;
+      let str = "";
+      for (let k = start; k <= end; k++) {
+        for (let i = 2; i < k; i++) {
+          if (k % i == 0) {
+            isPrime = false;
+            break;
+          } else {
+            isPrime = true;
+          }
+        }
+        if (isPrime) {
+          str = str + " " + k;
+        }
+      }
+      console.log(str);
+    </script> -->
+
+    <script>
+      let str = "";
+      let count=1
+      for (let i = 3; i < 10000; i++) {
+        let sum = 0;
+        for (let j = 1; j < i; j++) {
+          if (i % j == 0) {
+            sum += j;
+          }
+        }
+        if (sum == i) {
+            if(count%2!=0)
+            {
+                str = str + " " + i;
+                count++
+            }
+            else{
+                count++
+            }
+         
+        }
+      }
+
+      console.log(str);
+    </script>
+  </body>
+</html>
