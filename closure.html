@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <h1 style="background-color: #00BBFF;">closure in js</h1>
+      <script>
+        // const myFunction=()=>{
+        //     var myValue=2
+        //     const chilFunction=()=>{
+        //         console.log(myValue+1)
+        //     }
+        //     return chilFunction
+        // }
+        // const result=myFunction()
+        // result()
+        // result()
+        // result()
+
+        var x=10;
+        function foo(a)
+        {
+             var b=20;
+             function bar(c)
+             {
+                var d=30;
+                return boop(x+a+b+c+d)
+             }
+             function boop(e)
+             {
+                return e * -1
+             }
+             return  bar
+        }
+      var moar=foo(5)
+       var j=moar(15)
+       console.log(j)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </script>
+</body>
+</html>

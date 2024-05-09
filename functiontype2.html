@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>callback function</h1>
+    <script>
+    //   let no = Math.floor(Math.random() * 10) - 5;
+    //   function regi(cb) {   //hof(function as a parameter)
+    //     if (no > 3) {
+    //       cb();
+    //     }
+    //   }
+    //   function login() {
+    //     console.log("login is done");
+    //   }
+    //   regi(login);   // login is callback function (becuzz it is  executing a/c to regi condition )
+
+   //2.   (it is returning another function)
+    // function A(name)
+    // {
+    //      return function ()
+    //      {
+    //         console.log('my name is',name)
+    //      }
+    // }
+    // let x=A("utsav")
+    // x()
+
+    //3.  //hof(function treated as a value )
+    // let x=function()
+    // {
+    //     console.log('hello')
+    // }
+
+
+    //example of higher order functin
+
+//     function sayMyName(cb)
+//     {
+//          return cb
+//     }
+//     function myname()
+//     {
+//         return 'utsav'
+//     }
+//    let x= sayMyName(myname)
+//   let y= x()
+//   console.log(y)
+
+
+// (function(){
+//     console.log('hello how are you')
+// }())
+
+
+
+
+    </script>
+  </body>
+</html>
