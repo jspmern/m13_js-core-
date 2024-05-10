@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>all , allsettled,race,any</h1>
+     <script>
+        // let p1=new Promise((res,rej)=>{
+        //     let no=Math.trunc(Math.random()*10)
+        //     if(no>3)
+        //     {
+        //         res('hello i am p1 promises')
+        //     }
+        //     else{
+        //         rej('hello i am p1 rejected')
+        //     }
+        // })
+        // let p2=new Promise((res,rej)=>{
+        //     let no=Math.trunc(Math.random()*10)
+        //     if(no>3)
+        //     {
+        //         res('hello i am p2 promises')
+        //     }
+        //     else{
+        //         rej('hello i am p2 rejected')
+        //     }
+        // })
+        // let p3=new Promise((res,rej)=>{
+        //     let no=Math.trunc(Math.random()*10)
+        //     if(no>3)
+        //     {
+        //         res('hello i am p3 promises')
+        //     }
+        //     else{
+        //         rej('hello i am p3 rejected')
+        //     }
+        // })
+
+        // //prmosies all  (return all promises in case of all settled and return only reject when promises is not settled)
+        // Promise.all([p1,p2,p3]).then((item)=>{
+        //     console.log(item)
+        // }).catch((err)=>{
+        //     console.log(err)
+        // })
+
+
+        //allsetteled (it is retur all promises after settled   with reject(resone) and resolve)
+    //     let p1=new Promise((res,rej)=>{
+    //     setTimeout(()=>{
+    //         res('hello i am p1')
+    //     },2000)
+    // })
+    // let p2=new Promise((res,rej)=>{
+    //     setTimeout(()=>{
+    //         res('hello i am p2')
+    //     },1000)
+    // })
+    // let p3=new Promise((res,rej)=>{
+    //     setTimeout(()=>{
+    //         rej('hello i am p3')
+    //     })
+    // })
+    // Promise.allSettled([p1,p2,p3]).then((item)=>{
+    //     console.log(item)
+    // }).catch((err)=>{
+    //     console.log(err)
+    // })
+
+
+       //race(only one promises which one is settled first even resolve or reject)
+    //    let p1=new Promise((res,rej)=>{
+    //     setTimeout(()=>{
+    //         res('hello i am p1')
+    //     },2000)
+    // })
+    // let p2=new Promise((res,rej)=>{
+    //     setTimeout(()=>{
+    //         res('hello i am p2')
+    //     },1000)
+    // })
+    // let p3=new Promise((res,rej)=>{
+    //     setTimeout(()=>{
+    //         rej('hello i am p3')
+    //     })
+    // })
+    // Promise.race([p1,p2,p3]).then((item)=>{
+    //     console.log(item)
+    // }).catch((err)=>{
+    //     console.log(err)
+    // })
+
+
+
+
+        //any (only resolve which one is settled first)
+    // let p1=new Promise((res,rej)=>{
+    //     setTimeout(()=>{
+    //         res('hello i am p1')
+    //     },2000)
+    // })
+    // let p2=new Promise((res,rej)=>{
+    //     setTimeout(()=>{
+    //         res('hello i am p2')
+    //     },1000)
+    // })
+    // let p3=new Promise((res,rej)=>{
+    //     setTimeout(()=>{
+    //         rej('hello i am p3')
+    //     })
+    // })
+    // Promise.any([p1,p2,p3]).then((item)=>{
+    //     console.log(item)
+    // }).catch((err)=>{
+    //     console.log(err)
+    // })
+
+
+
+
+     </script>
+</body>
+</html>

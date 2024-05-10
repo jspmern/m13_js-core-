@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <h1>promises</h1>
+       <script>
+        // let x=   new Promise((res,rej)=>{
+        //     let no=Math.trunc(Math.random()*10)
+        //     console.log(no)
+        //     if(no>3)
+        //     {
+        //         res('hello i am resolve')
+        //     }
+        //     else{
+        //         rej('hello i am reject')
+        //     }
+        // })
+
+        // x.then((data)=>{
+        //     console.log(data)
+        // })
+        // x.catch((err)=>{
+        //     console.log(err)
+        // })
+        // console.log(x)
+
+    //  function checkMail()
+    //  {
+    //     return new Promise((res,rej)=>{
+    //         let no = Math.trunc(Math.random()*10)
+    //         if(no>5)
+    //         {
+    //             res('mail has arrived')
+    //         }
+    //         else{
+    //             rej('mail has not arrived')
+    //         }
+    //     })
+    //  }
+    //  checkMail().then((item)=>{
+        // console.log(item)
+    //  }).catch((err)=>{
+    //     console.log(err)
+    //  }).finally(()=>{
+    //     console.log('experiment done')
+    //  })
+
+    
+    // console.log('test1')
+    // let p=new Promise((res,rej)=>{
+    //     console.log('test 2')
+    //     if(true)
+    //     {
+    //         res('test3')
+    //         console.log('test4')
+    //     }
+    // })
+    // console.log('test 5')
+    // p.then((item)=>{
+    //     console.log(item)
+    //     console.log('test6')
+    // })
+    // console.log('test7')
+
+
+    console.log('test1')
+    let p=new Promise((res,rej)=>{
+       setTimeout(() => {
+         console.log('test 2')
+       }, 100);
+        if(true)
+        {
+           setTimeout(() => {
+             res('test3')
+           }, 1000);
+            console.log('test4') 
+        }
+    })
+    console.log('test 5')
+    p.then((item)=>{
+       setTimeout(() => {
+         console.log(item)
+       },);
+        console.log('test6')
+    })
+    console.log('test7')
+
+
+
+       </script> 
+</body>
+</html>

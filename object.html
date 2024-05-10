@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <h1>object </h1>
+       <script>
+        //object literal
+        // let student={}
+        // student.name="utsav"
+        // student.subject="Mern"
+        // student.heigth="168cm"
+        // student.add="delhi"
+
+        // let student={name:'utsav',subject:"mern",heigth:"168cm",add:"delhi"}
+        // console.log(student,typeof student)
+
+        //object's instances
+    //  let teacher= new Object()
+    //  teacher.name="utsav"
+    //  console.log(teacher)
+
+        //  function constructor ways
+
+  function teacher(name,add,age)
+  {
+       this.name=name,
+       this.add=add,
+       this.age=age
+  }   
+
+let utsav= new  teacher("utsav","delhi",24)
+let vicky=new teacher("vicky",'odshia',24)
+ 
+console.log('utsav',utsav)
+console.log('vicky',vicky)
+ 
+
+     
+
+       </script>
+</body>
+</html>
