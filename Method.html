@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>object method</h1>
+       <script>
+       let obj={
+        name:'utsav',
+        add:"delhi",
+        age:24,
+        dob:1999,
+        details:function()
+        {
+           
+             console.log(`my name is ${this.name} and i am form ${this.add} and ${this.age}`)  
+        },
+        ageChecker(curr_age)
+        {
+            return  curr_age-this.dob
+        }
+       }
+       console.log(obj)
+       //executing method
+       obj.details()
+      let x= obj.ageChecker(2024)
+      console.log(x)
+
+       </script>
+</body>
+</html>
