@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <h1>inbuiltObjectMethod</h1> 
+      <script>
+        console.log('hello')
+        let student={
+            name:"utsav",
+            add:'delhi',
+            age:10,
+            showDetails()
+            {
+                console.log(`myname is ${this.name}`)
+            }
+        } 
+
+                     //create()
+        //let teacher= Object.create(student)
+        //console.log(teacher)  //student is created in a prototype
+                     //keys()
+        //let objectKey=Object.keys(student)  //['name','add','showDetails']
+                      //values()
+       // let objectValue=Object.values(student)  //['utsav','delhi','functon(){...}']
+                      //entries()
+       // let objectentry=Object.entries(student)
+       // console.log(objectentry)   [['name','utsav'],['add','delhi'],['age',10],['showDetails','fnction(){...}']]
+                     //assign()
+        // let copyObject=Object.assign({},student)
+        // copyObject.name="vicky"
+        // console.log(copyObject)    
+        // console.log(student)   
+                       //freeze()    
+        //  let newUser=Object.freeze(student)
+        //   newUser.name="utsav jha"  
+        //   delete newUser.name;
+        //   newUser.hobbies='cricket'
+        //   console.log(newUser)  
+                       //seal()
+        let newUser=Object.seal(student)
+        newUser.hobbies="cricket"
+        delete newUser.name
+        newUser.name="vicky"
+        console.log(newUser)      
+      </script>
+</body>
+</html>

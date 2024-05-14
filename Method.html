@@ -1,34 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>object method</h1>
-       <script>
-       let obj={
-        name:'utsav',
-        add:"delhi",
-        age:24,
-        dob:1999,
-        details:function()
-        {
-           
-             console.log(`my name is ${this.name} and i am form ${this.add} and ${this.age}`)  
-        },
-        ageChecker(curr_age)
-        {
-            return  curr_age-this.dob
-        }
-       }
-       console.log(obj)
-       //executing method
-       obj.details()
-      let x= obj.ageChecker(2024)
-      console.log(x)
+    <script>
+      //    let obj={
+      //     name:'utsav',
+      //     add:"delhi",
+      //     age:24,
+      //     dob:1999,
+      //     details:function()
+      //     {
 
-       </script>
-</body>
+      //          console.log(`my name is ${this.name} and i am form ${this.add} and ${this.age}`)
+      //     },
+      //     ageChecker(curr_age)
+      //     {
+      //         return  curr_age-this.dob
+      //     }
+      //    }
+      //    //executing method
+      //    obj.details()
+      //   let x= obj.ageChecker(2024)
+      //   console.log(x)
+
+      //     let car={
+      //         user:"utsav",
+      //         name:'bmw',
+      //         no:'ka01kd768',
+      //         color:'red',
+      //         pur_date:'1998',
+      //         isValidOrNot:function(arg)
+      //         {
+      //             if(arg-this.pur_date>10)
+      //             {
+      //                return `${this.user} car is not eliglibe for drive`
+      //             }
+      //             else{
+      //                 return `${this.user} car is valid`
+      //             }
+      //         }
+      //     }
+
+      //    let result= car.isValidOrNot(2024)
+      //    console.log(result)
+
+      //     let student=new Object()
+      //     student.ageChecker=function(dob)
+      //     {
+      //         // console.log(new Date().getFullYear())
+      //        return`${new Date().getFullYear()}-${dob}`
+      //     }
+      //   let result=  student.ageChecker(1998)
+      //   console.log(result)
+
+      function student() {
+        this.issalary = function () {
+          console.log("yes");
+        };
+      }
+
+      let utsav = new student();
+      let vicky = new student();
+
+      console.log(utsav);
+      console.log(vicky);
+    </script>
+  </body>
 </html>
