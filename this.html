@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>this keyword</h1>
+    <script>
+      //this keyword
+      // //1. in object
+      //   let obj = {
+      //     name: "utsav",
+      //     add: {
+      //       ca: "blr",
+      //       pa: "delhi",
+      //       isAddress() {
+      //         console.log(this);
+      //       },
+      //     },
+      //   };
+      //   //output ?
+      //   obj.add.isAddress()
+
+      //2.this keyword in function
+       //window
+      //    function add()
+      //    {
+      //      console.log(this)
+      //    }
+       //window
+      //     let  add=function()
+      //    {
+      //      console.log(this)
+      //    }
+      
+      //window
+      //    let add=()=>
+      //    {
+      //      console.log(this)
+      //    }
+      //    add()
+      
+
+      //arrrow = lexical(parent)
+    //   let obj = {
+    //     name: "utsav",
+    //     print() {
+           
+    //       let hello=()=> {
+    //         console.log(this);
+    //       }
+    //       hello();
+    //     },
+    //   };
+    //   obj.print();
+
+
+    let add=()=>{
+        let mul =()=>{
+              console.log(this)
+        }
+        mul()
+    }
+    add()
+    </script>
+  </body>
+</html>
