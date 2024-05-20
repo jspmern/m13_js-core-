@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>array 4 (methods)</h1>
+    <script>
+      //sort string
+      // let data=['q','a','p','t','b','x','m']
+      // data.sort()
+      // console.log('original arrray',data)  //asc
+      //sort number
+      // let data=[13,2,9,19,92,81,8,18,9,11]
+      // data.sort((a,b)=>{
+      //     return a-b    //asc   (b-a) //desc
+      // })
+      //reverse
+      // let arr=['utsav','vicky','ram','aman','pooja']
+      // arr.sort().reverse()
+      // console.log('original array',arr)
+      //concat()
+      //   let arr=['utsav','delhi']
+      //   let arr2=['vicky','odisha']
+      //   let arr3=['abx','dfsdfd']
+      //     let result= arr.concat(arr2,arr3,'utsavjha')
+      //    console.log(result)
+
+      //flat()
+      //let result=[1,2,3,'utsav',[2,3,4,5,['a','b','c',['c','x','y']]]]
+      //  let resultUpdated=   result.flat()
+      //     console.log(resultUpdated.flat().flat())
+      // let result1=result.flat(3)
+      // console.log(result1)
+
+      //indexOf()
+      // let arr=[1,2,5,3,4,5,6]
+      // let result=''
+      // result=arr.indexOf(4)        //4 return index value
+      // result=arr.indexOf(50)      //-1 no element found
+      // result=arr.indexOf(5)       //output is 2 (first match index return)
+      //   result=arr.indexOf(5,3)   //searching is start form index 3
+      // console.log(result)
+
+      //lastIndexOf()
+      //   let arr=[14,2,5,3,14,5,6]
+      //    let result=arr.lastIndexOf(14)
+      //    console.log(result)
+
+      //includes()
+      //   let arr = [14, 2, 5, 3, 14, 5, 6];
+      //   let result = "";
+      //   result = arr.includes(2); //true
+      //   result = arr.includes(50); //false
+      //   result = arr.includes(2, 4); //false
+      //   console.log(result);
+
+                    //find()
+     // let arr = [
+    //     { name: "utsav", add: "jaipur" },
+    //     { name: "vicky", add: "odisha" },
+    //     { name: "utsav", add: "delhi" },
+    //   ];
+    //   //1.find method return first match element
+    //   let result = arr.find((item, i, o_arr) => {
+    //     if (item.name == "utsav" && i==2) {
+    //       return item;
+    //     }
+    //   });
+    //   console.log("result", result);
+
+         //findIndex()
+    // let arr = [
+    //     { name: "utsav", add: "jaipur" },
+    //     { name: "vicky", add: "odisha" },
+    //     { name: "utsav", add: "delhi" },
+    //   ];
+    // //   //1.find method return first match element
+    //   let result = arr.findIndex((item, i, o_arr) => {
+    //     if (item.name == "utsav" && i==2) {
+    //       return item;
+    //     }
+    //   });
+    //   console.log("result", result);
+
+
+                 //findLast()
+    //              let arr = [
+    //     { name: "utsav", add: "jaipur" },
+    //     { name: "vicky", add: "odisha" },
+    //     { name: "utsav", add: "delhi" },
+    //   ];
+    // //   //1.find method return first match element
+    //   let result = arr.findLast((item, i, o_arr) => {
+    //     if (item.name == "utsav") {
+    //       return item;
+    //     }
+    //   });
+    //   console.log("result", result);
+
+
+         //findLastIndex()
+        let arr=      [{ name: "utsav", add: "jaipur" },
+        { name: "vicky", add: "odisha" },
+        { name: "utsav", add: "delhi" },
+      ];
+         let result = arr.findLastIndex((item, i, o_arr) => {
+        if (item.name == "utsav") {
+          return item;
+        }
+      });
+      console.log("result", result);
+
+
+    </script>
+  </body>
+</html>
