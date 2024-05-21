@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <h1>itration method in array</h1>
+       <script>
+    //    let arr=[3,4,5,6,7,8,10,23]
+       //foreach takes cb 
+       //return undefined
+       //break and continue is Illegal
+       //method chaining is not possible
+    //   let x= arr.forEach((item,i,o_arr)=>{
+    //         if(true) continue;
+    //    }).sort()
+    //    console.log(x)
+   
+    //    emp.forEach((item,i,o_arr)=>{
+    //     //1. normal iteration
+    //     //   console.log(item.name)
+    //     //2.  condition
+    //     // if(item.sal>52)
+    //     // {
+    //     //     console.log(item)
+    //     // }
+    //     //3.  update
+    //     // if(item.name=="utsav")
+    //     // {
+    //     //    o_arr[i].name='utsav jha'  
+    //     // }
+    //     //4.sum of salary
+    //     sal+=item.sal
+    //    })
+    //    console.log(emp,sal)
+//     let emp=[{name:'utsav',sal:89},{name:"vicky",sal:50},{name:'vivek',sal:200}]
+//     let sal=0
+//    let result= emp.map((item,i,o_arr)=>{
+//          return item.sal+20 
+//     }).sort((a,b)=>{
+//         return a-b
+//     })
+//     console.log(result)
+//     console.log(emp)
+
+// let arr=[5,6,7,8,9,11,12,12,13]
+// let result=arr.filter((item)=>{
+//     return item>7
+// })
+// let arr=[4,5,6,7,8,9]
+// let result=arr.reduceRight((acc,item,i,o_arr)=>{
+//         console.log('acc',acc)
+//         console.log('item',item)
+// },0)
+
+// let arr=[4,5,6,7,8]
+// let result=arr.some((item,i,a)=>{
+//      return item>6
+// })
+
+// console.log(result)
+
+
+
+//copywith
+
+//copyWithin(target,start,end)
+let arr=['utsav','vicky',8,9,5]
+let result=arr.copyWithin(0,2,3)
+console.log('updated arr',result)
+
+
+
+
+
+
+
+
+
+
+
+
+       </script>
+
+</body>
+</html>
