@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <h1>call,apply,bind</h1>
+       <script>
+          //call - self invoked method
+          // it takes n arguments first is owner obj, form secound parameter
+        //   let emp1={
+        //     name:'utsav',
+        //     add:'delhi',
+        //     print:function()
+        //     {
+        //          console.log(`my name is ${this.name} and add is ${this.add}`)
+        //     },
+        //     salary:function(jan,feb,march)
+        //     {
+        //         console.log(`my name is ${this.name} and  i am from${this.add} and my last three months sal : ${jan+feb+march}`)
+        //     }
+        //   }
+        //   let emp2={
+        //     name:'vicky',
+        //     add:'odshia'
+        //   } 
+           //emp1.print()
+           //emp1.salary(20,30,40)
+        //   by using call method
+        //   emp1.print.call(emp2)
+        //   emp1.salary.call(emp2,30,40,50)
+
+        let obj={name:'utsav',
+        add:'delhi',
+        isgender(){
+             console.log('male')
+        }
+    }
+        function print(age,sal)
+        {
+            console.log(this.name + this.add+ age +sal)
+            this.isgender()
+        }
+        //call
+        print.call(obj,25,10)
+    
+       </script>
+</body>
+</html>
