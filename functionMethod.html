@@ -32,19 +32,42 @@
         //   emp1.print.call(emp2)
         //   emp1.salary.call(emp2,30,40,50)
 
-        let obj={name:'utsav',
-        add:'delhi',
-        isgender(){
-             console.log('male')
+    //     let obj={name:'utsav',
+    //     add:'delhi',
+    //     isgender(){
+    //          console.log('male')
+    //     }
+    // }
+        // function print(age,sal)
+        // {
+        //     console.log(this.name + this.add+ age +sal)
+        //     this.isgender()
+        // }
+        // //call
+        // print.call(obj,25,10)
+
+
+                                      //apply
+        // let obj={
+        //     name:'utsav',
+        //     age:25
+        // }
+        // function print(address1,address2,address3)
+        // {
+        //     console.log(`${this.name} and ${this.age}  my address is:${address1} and my grandparents address is:${address2} and my education address:${address3}`)
+        // }
+        // print.apply(obj,['delhi','bihar','jaipur'])
+                                   //bind
+        let obj={
+            name:'utsav',
+            add:'delhi'
         }
-    }
-        function print(age,sal)
+        function print(sal)
         {
-            console.log(this.name + this.add+ age +sal)
-            this.isgender()
+            console.log(`${this.name} and ${this.add} and sal is :${sal}`)
         }
-        //call
-        print.call(obj,25,10)
+       let ref= print.bind(obj,2300)
+       ref()
     
        </script>
 </body>
