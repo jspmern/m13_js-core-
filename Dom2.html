@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <div class="container">
+            <h1 class="head" id="id1">hello how are you1</h1>
+            <h1 class="head" id="id2">hello how are you2</h1>
+            <h1 class="head" id="id3">hello how are you3</h1>
+        </div>
+        <script>
+            //group selector
+                        //1.gebcN
+            //let result=document.getElementsByClassName('head')
+           // for(let i of result) i.style.color='red'
+                       //2.gebtN
+        //    let result=document.getElementsByTagName('h1')
+        //    console.log(result)   
+                        //3.qsa
+        let result=''
+        //class name
+        //result=document.querySelectorAll('.head')
+        //by the tag name
+       // result=document.querySelectorAll('h1')
+       //query
+       result=document.querySelectorAll('.container>h1')
+        console.log(result)          
+        </script>
+</body>
+</html>

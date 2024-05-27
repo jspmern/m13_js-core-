@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <h1 id="hello"> traversing in Dom</h1>
+          <div id="container">
+            <h1 id="head">hello i am first child</h1>
+             <h6 id="head6">hello how are you</h6>
+            <p id="para">hello i am last child</p>
+          </div>
+       <script>
+
+        //sibling
+        let head6=document.getElementById('head6')
+        console.log(head6.nextSibling)  //it is returning next sibling including space and comment
+        console.log(head6.nextElementSibling)   //it is returning next sibling excluding space and comment
+        console.log(head6.previousSibling) //it is returning the previous sibling includign space and comment
+        console.log(head6.previousElementSibling) //it is returning the previous sibling excluding space and comment
+                       //child
+    //  let container=document.getElementById('container')
+    //  console.log(container.childNodes)        //child node return all the children including space and comment
+    //  console.log(container.children)   //children return all the children excluding space and comment
+    // console.log(container.childElementCount)   //it return children count excluding space and comment
+    // console.log(container.nodeName)    //it is returning node name (i.e DIV,H1,P)
+    // console.log(container.nodeType)     //it is returning inter value 
+    // console.log(container.childNodes[3].nodeType)
+    // console.log(container.firstChild)   //it is returning the first child of parents including sapce and comment
+    // console.log(container.firstElementChild)   //it is returning the first child of parents excluding the space and comment
+    // console.log(container.lastChild) //it returning the last child of parents includign the space and comment..
+    // console.log(container.lastElementChild)  //it is returning the last child of parents excluding the sapce and comment
+                   //parent  
+    //   let hello=document.getElementById('hello')
+    //   console.log(hello.parentElement)
+    //   console.log(hello.parentNode)
+    //   hello.parentElement.style.backgroundColor="red"
+    // //    let para=document.getElementById('para')
+    // //    //it return the reference of parent Element
+    // //    console.log(para.parentNode) 
+    // //    console.log(para.parentElement)    
+       </script>
+</body>
+</html>
