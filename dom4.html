@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <h1>manipulating Elements</h1>
+       <div id="container">
+        <h1 id="head">hello how are you</h1>
+        <p>hello i am paragraph</p>
+        <a href="#">click here for result</a>
+       </div>
+       <script>
+        console.log('hello')
+        //innerHTML- innerhtml manipulating your html element inside the target(means override your all inside element)
+        let container=document.getElementById('container')
+       // container.innerHTML='<h1>hello i am update html by using innerHtml </h1>'
+        console.log(container.innerHTML)
+        //innerText - innertext manipulating your  text inside the target(means override your all inside text  )
+        let head=document.getElementById('head')
+        console.log(head.innerText)
+        head.innerText="hello how are you updated by innerText"
+        //style - by using this property we can apply styling (property come into a camelcasenotation (ie. background-color=backgroundColor))
+        container.style.backgroundColor="orange"
+        container.style.border="2px solid red"
+       </script>
+</body>
+</html>

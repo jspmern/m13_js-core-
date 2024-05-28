@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .design{
+            border: 1px solid black;
+            height: 75px;
+            width: 80px;
+            margin:2px;
+        }
+        #container
+        {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+      <div id="container">
+           
+      </div>
+      <script>
+        //1.assignment
+        // let container=document.getElementById('container')
+        // container.style.height="500px"
+        // container.style.width="500px"
+        // container.style.backgroundColor="red"
+        // container.style.border="1px solid black"
+        // container.innerText="hello i am inner text"
+
+        //2.container
+        let container=document.getElementById('container')
+        let str=''
+        for (let i=1;i<=10;i++)
+        {
+            let random=Math.trunc(Math.random()*200)
+              str+=`<div class='design' style="background-color:rgb(${random*10},${random-200}, ${random-50})"> unique text ${i} </div>` 
+                 
+        }
+        container.innerHTML=str
+        
+
+
+      </script>
+</body>
+</html>
