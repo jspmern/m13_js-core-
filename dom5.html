@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <div id="container">
+            <p class="para" id="para1">lorem1</p>
+            <p class="para" id="para2">lorem10</p>
+            <p class="para" id="para3">lorem1</p>
+            <p class="para" id="para4">lorem how are you</p>
+            <p class="para" id="para5">lorem</p>
+        </div>
+        <div id="cont2">
+            hello how are you
+            <span style="display: none;">i am fine</span>
+        </div>
+      <script>
+
+       
+         let container=document.getElementById('container')
+         //createElement()   //it create html element 
+         let button=document.createElement('button')
+         button.innerText="click here"
+        //  //appendChild ()- it is appending the child in last (target)
+        //   container.appendChild(button)  
+        //append() //it can append multiple node and as well as dom string 
+          let h1=document.createElement('h1')
+         h1.innerText="hello"
+        //  h1.id='hello'
+        //container.append('hello how are you i am fine')
+        //container.append(button,h1)
+
+        //prepend()   //insert a node before the first child node of parent node
+        // container.prepend(button,h1)
+
+        //after()    //insert a node after an element
+        //container.after(button)
+       //insertBefore()   to insert node before another node as a child node of parents node
+        //   container.insertBefore(h1,document.getElementById('para3'))
+
+      
+      //textcontent vs innerText
+      //innertext takes the css style into account and return only human readable text but otherhand textcontent return all text 
+    //   let cont2=document.getElementById('cont2')
+    //   console.log(cont2.innerText)
+    //   console.log(cont2.textContent)
+
+    //replaceChild() - by using this method we can replace an html element by a new one in parents
+      let h6=document.createElement('h6')
+      h6.textContent="hello i am replace child method"
+      h6.style.color="red"
+     container.replaceChild(h6,container.firstElementChild)
+
+     //replaceWith()    //target.replaceWith(newNode)
+        // let para5=document.getElementById('para5')
+        // para5.replaceWith(h6)
+    //cloneNode()    -is a method of the node interface that allows you to cloan an element     if you pass true means you are doing deep copy(means child as well as parents) and if you false (shallow (only parent)) 
+     let deep=container.cloneNode(true)
+     //document.body.appendChild(deep)
+
+     //removeChild () - we can remove child element in parent
+     container.removeChild(document.getElementById('para4'))
+      </script> 
+</body>
+</html>
