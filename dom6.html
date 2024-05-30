@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #color{
+            color:red
+        }
+        .border{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+       <h1>Attributes property</h1>
+       <div id="container" >
+        <h1 align="center" style="color:orange" id="head">hello how are you</h1>
+       </div>
+       <script>
+        //setAttribute -to set a value of an attributes on a specified elements
+           // let container=document.getElementById('container')
+        //    let head=document.createElement('h1')
+        //    let anchor=document.createElement('a')
+        //    anchor.innerText="click here"
+        //    anchor.setAttribute('href',"https://google.com")
+        //    anchor.setAttribute('style',"text-decoration:none;")
+        //    head.innerText="hello i am heading !"
+        //    //setting attributes
+        //    head.setAttribute('align',"center")
+        //    container.append(head,anchor)
+        //getAttribute- get the value of an attribute on an element
+            // let head=document.getElementById('head')
+            // let attribute=head.getAttribute('style')
+            // console.log(attribute)
+        //removeAttribute-to remove an attribute from a specified element
+        let head=document.getElementById('head')
+         head.removeAttribute('align') 
+       //hasAttribute - to check an element has a specified attributes or not and it return boolean
+        let result=head.hasAttribute('styles')
+        console.log(result)
+        //dynamic id
+       // head.setAttribute("id","color")
+       head.id="color"
+       //dynamic class
+      // head.setAttribute('class','border')
+       head.className="border"
+       </script>
+</body>
+</html>
