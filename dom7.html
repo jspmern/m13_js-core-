@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-dark{
+            background-color: black;
+            color:white
+        }
+        .b-2
+        {
+            border:2px solid red;
+        }
+        .formatter{
+         font-weight: bolder;
+        }
+        .undo{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+        <h1>manipulat Elements style</h1>
+        <div id="container">
+            <h1 class=" formatter"  id="head">hello how are you</h1>
+        </div>
+        <button onclick="toggleHandler()"></button>
+        <script>
+            let   head=document.getElementById('head')
+                         //className- is returning all the class name of element in string and it is overriding all the present class
+            // console.log(head.className)
+            // head.className='undo'
+                           //classList - it is returning the class in the array
+                          //add - it is adding class dynamically in element  (pass n class name)
+            head.classList.add('b-2','bg-dark')
+                    //remove- it is removing the class in element (pass n class name)
+           // head.classList.remove('bg-dark','b-2',)
+                         //contains- it is returning true/false (if class available==true else false)
+            //  let x= head.classList.contains('b-2')
+            //  console.log(x)
+                     //replace - it can replace class in element (syntax- replace(existing,new_one))
+           // head.classList.replace('bg-dark','formatter')
+               
+            function toggleHandler()
+            {
+                head.classList.toggle('bg-dark')
+            console.log(head.classList)
+            }
+        </script>
+</body>
+</html>
