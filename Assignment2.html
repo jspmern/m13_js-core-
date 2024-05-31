@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Assignment</h1>
+    <div id="container"></div>
+    <script>
+      let data = [
+        {
+          prod_naMe: "A",
+          url: "https://images.unsplash.com/photo-1716927856017-ec6dd4e4021e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+        {
+          prod_naMe: "B",
+          url: "https://images.unsplash.com/photo-1716927856017-ec6dd4e4021e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+        {
+          prod_naMe: "C",
+          url: "https://images.unsplash.com/photo-1716927856017-ec6dd4e4021e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+        {
+          prod_naMe: "D",
+          url: "https://images.unsplash.com/photo-1716927856017-ec6dd4e4021e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+      ];
+
+      //ref of container
+      let container = document.getElementById("container");
+      let table = document.createElement("table");
+        table.setAttribute('border',"1")
+        table.setAttribute('style','border-collapse:collapse;')
+      for (let i = 0; i < Object.keys(data[0]).length; i++) {
+          let tr=document.createElement('tr')
+           for(let j=0;j<data.length;j++)
+           {
+            let td=document.createElement('td')
+              if(i==0)
+              {
+                td.innerText=`${data[i+j].prod_naMe}`
+              }
+              else{
+                   let anchor=document.createElement('a')
+                   anchor.setAttribute('href',"https://google.com")
+                   let img=document.createElement('img')
+                   img.setAttribute('src',`${ data[j].url}`)
+                   img.setAttribute('heigth',"200")
+                   img.setAttribute('width',200);
+                   img.setAttribute('title',"utsav")
+                   anchor.append(img)
+                   td.append(anchor)
+              }
+             tr.append(td)
+           }
+           table.append(tr)
+      }
+      container.append(table)
+    </script>
+  </body>
+</html>
