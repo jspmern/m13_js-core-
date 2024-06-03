@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <h1>hello i am keyboard event</h1>
+       <input type="text" id="input" placeholder="hello i am keyboard"/>
+       <script>
+        let input =document.getElementById('input')
+        //it is fire with whitespace as well as enter and all keywords and number
+        //  input.addEventListener('keypress',()=>{
+        //     console.log('hello i am keypress')
+        //  })
+        //  //it is fire  with every button
+        //  input.addEventListener('keyup',()=>{
+        //     console.log('hello i am keypress')
+        //  })
+           //it is fire  with every button
+           input.addEventListener('keydown',()=>{
+            console.log('hello i am keypress')
+         })
+       </script>
+</body>
+</html>

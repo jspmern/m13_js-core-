@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <h1 id="head">hello i am  mouse event</h1>
+       <!-- <button onclick="greetingHandler()">click</button> -->
+       <button  id="btn">click</button>
+
+       <script>
+        //ther is a three way to listen event
+        //3.addEventListner()
+        let btn=document.getElementById('btn')
+        //in addeventListener do not use on keyword means(onclick=click,onmouseover=mouseover)
+        let head=document.getElementById('head')
+        btn.addEventListener('click',()=>{
+             head.style.backgroundColor="orange"
+        })
+
+
+        //2.way refrence
+        // let btn=document.getElementById('btn')
+        // let head=document.getElementById('head')
+        // function greetingHandler()
+        // {
+        //     head.style.backgroundColor="red"
+        //     console.log('hello how are you')
+        // }
+        // btn.onclick=greetingHandler
+
+        // //1.attribute way
+        // let head=document.getElementById('head')
+        // function greetingHandler()
+        // {
+        //     head.style.backgroundColor="red"
+        //     console.log('hello how are you')
+        // }
+       </script>
+</body>
+</html>

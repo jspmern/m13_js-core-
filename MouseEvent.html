@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            background-color: red;
+            height: 20vh;
+            width: 100%;
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+        <h1>MOUSE EVENT </h1>
+        <div id="container"></div>
+        <script>
+          let container=document.getElementById('container')
+          //click
+          container.addEventListener('click',()=>{
+            console.log('hello i am click event')
+          })
+        //dblclick
+        container.addEventListener('dblclick',()=>{
+            console.log('hello i am  double click event')
+          })
+          //onmouseover
+          container.addEventListener('mouseover',()=>{
+            console.log('hello i am  come over  event')
+            container.style.backgroundColor="black"
+          })
+               //onmousedown
+               container.addEventListener('mousedown',()=>{
+            console.log('hello i am  mouse press event')
+            container.style.backgroundColor="black"
+          })
+                //onmouseup
+                container.addEventListener('mouseup',()=>{
+            console.log('hello i am  mouse relesae event')
+            container.style.backgroundColor="black"
+          })
+             //onmousemove
+             container.addEventListener('mousemove',()=>{
+            console.log('hello i am  mouse move event')
+            container.style.backgroundColor="black"
+          })
+
+          //   //onmousout
+          container.addEventListener('mouseout',()=>{
+            console.log('hello i am  mouse leave event')
+            container.style.backgroundColor="black"
+          })
+        </script>
+</body>
+</html>
