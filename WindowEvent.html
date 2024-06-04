@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <h1 style="height: 200vh;">window event</h1>
+       <button id="btn">click</button>
+       <script>
+        document.getElementById('btn').addEventListener('click',()=>{
+            window.location.href="https://google.com"
+        })
+     window.addEventListener('load',()=>{
+            alert('hello my fellow developer')
+         })
+         window.addEventListener('scroll',()=>{
+            console.log(document.querySelector('h1').offsetHeight)
+            console.log('hello scroll event')
+         })
+         window.addEventListener('unload',()=>{
+            console.log('hello i am unload ')
+         
+         })
+       </script>
+</body>
+</html>

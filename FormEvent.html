@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <form action="" method="">
+        <input type="text" placeholder="Enter your email" id="text"/>
+        <br/>
+        <br/>
+        <input type="password" placeholder="Enter your password"/>
+        <br/>
+        <br/>
+        <button  >submit</button>
+      </form>
+      <script>
+        let form=document.querySelector('form')
+        let text=document.querySelector('#text')
+        form.addEventListener('submit',(e)=>{
+            e.preventDefault()
+            console.log('submit event is fire')
+        })
+        form.addEventListener('change',()=>{
+            console.log('change event is fire')
+        })
+        text.addEventListener('focus',()=>{
+            console.log('hello i am focus event')
+            if(!text.value)
+            {
+                text.style.border="1px solid red"
+            }
+        })
+        text.addEventListener('blur',()=>{
+            console.log('hello blur event')
+          if(text.value)
+          {
+            text.style.border="1px solid black"
+          }
+        })
+      </script>
+</body>
+</html>
