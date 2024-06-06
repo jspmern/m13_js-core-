@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>form Handling</h1>
+    <form>
+      <input type="text" placeholder="Enter your name" id="name" />
+      <br />
+      <br />
+      <input type="password" placeholder="Enter your password" id="pass" />
+      <br />
+      <br />
+      <input type="number" placeholder="Enter your number" id="mobile" />
+      <br />
+      <br />
+      <input type="email" placeholder="Enter your email" id="email" />
+      <br />
+      <br />
+      M<input type="radio" value="m" name="gender" />
+       F<input
+        type="radio"
+        value="f"
+        name="gender"
+      />
+      O<input type="radio" value="o" name="gender" />
+      <br />
+      <br />
+      choose your course
+      <select id="course">
+        <option value="html">html</option>
+        <option value="css">css</option>
+        <option value="js">js</option>
+      </select>
+      <br/>
+      <br/>
+      <textarea rows="10" cols="20" placeholder="Enter your feedback" id="feed"> </textarea>
+      <br/>
+      <br/>
+        address 
+        <input type="checkbox" value="india" name="country"/>
+        <input type="checkbox" value="usa" name="country"/>
+        <input type="checkbox" value="pak" name="country"/>
+      <br/>
+      <br/>
+      <button id="btn">register</button>
+    </form>
+    <script>
+        let btn=document.getElementById('btn')
+        btn.addEventListener('click',(e)=>{
+            //it prevent the default behaviour of form (refresh)
+            e.preventDefault()
+          let name=document.getElementById('name')
+          let password=document.getElementById('pass')
+          let mobile=document.getElementById('mobile')
+          let course=document.getElementById('course')
+          //let name=document.getElementById('name')
+          let email=document.getElementById('email')
+          let msg=document.getElementById('feed')
+          let gender=document.querySelector('input[name="gender"]:checked')
+          let checkboxes = document.querySelectorAll('input[name="country"]:checked');
+          let values = [];
+        if(!name.value|| !email.value|| !mobile.value|| !course.value || !msg.value  ||!password.value)
+        {
+            alert('all field are required')
+        }
+        else{
+            checkboxes.forEach((checkbox) => {
+                values.push(checkbox.value);
+            });
+            console.log(name.value,email.value,mobile.value,course.value,msg.value,password.value,gender.value,values)
+            name.value=""
+            email.value=""
+            mobile.value=""
+            msg.value=""
+            password.value=""
+        }
+        })
+    </script>
+  </body>
+</html>
