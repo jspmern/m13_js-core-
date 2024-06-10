@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       //when perform any event in a web page that time automatically one object is created that object is called event object. and   event object is a object that    keeping track of event,
+       //note - event is a keyword in attribute ways
+       <br/>
+       <!-- <button onclick="print(event)">click here</button> -->
+       <button id="btn">click</button>
+</body>
+<script>
+    function print(e)
+    {
+        console.log('hello',e)
+    }
+    let btn=document.getElementById('btn')
+    btn.addEventListener('click',(e)=>{
+        console.log(e.type)  //event name
+        console.log(e.target) //targetpoin
+        console.log(e.timeStamp)  //time stamp
+        e.target.style.color="red"
+   console.log(e)
+    })
+</script>
+</html>

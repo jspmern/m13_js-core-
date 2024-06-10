@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <h1>hello i am add Event Listner</h1>
+       <!-- <button onclick="print1()" onclick="print2()">click</button> -->
+       //add event listner is not overriding the same event
+       <button id="btn">click</button>
+       <script>
+        function print1()
+        {
+            console.log('hello i am print1')
+        }
+        function print2()
+        {
+            console.log('hello i am print2')
+        }
+        let btn=document.getElementById('btn')
+        btn.addEventListener('click',print1)
+        btn.addEventListener('click',print2)
+       </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>local + session storage</h1>
+        <button>hello</button>
+        <script>
+        //     let name="utsav"
+        //     //1.i have to save data in local storage
+        //     localStorage.setItem('details',name)
+        //     localStorage.setItem('age',25)
+        //     localStorage.setItem('address','delhi')
+        //    //2.i have to read the local storage (if key is available than data else null)
+        //    let result=localStorage.getItem('details')
+        //    console.log(result)
+        // //3.how to update
+        //    localStorage.setItem('details',"vicky")
+        // //4.how to delete specific data
+        //   localStorage.removeItem('details')
+        // //5.clear all localstorage 
+        // localStorage.clear()  
+
+        
+
+        //example for localstorage
+    //     let obj={name:'utsav',age:25,address:"delhi"}
+    //     localStorage.setItem('details',JSON.stringify(obj))
+    //      console.log(JSON.parse(localStorage.getItem('details')))
+    //     let data=JSON.stringify(obj)   //it convert original to string
+    //    let result=JSON.parse(data)     //covert stringify to original data
+    //    console.log('strignify dta',data)
+    //    console.log('parse data',result)
+
+
+    //.......................session storage....................
+    sessionStorage.setItem('details',JSON.stringify({name:"utsav"}))
+    document.querySelector('button').onclick=function()
+    {
+        console.log('hello session')
+        window.location.href="https://google.com"
+    }
+            
+        </script>
+</body>
+</html>

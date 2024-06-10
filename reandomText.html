@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <h1>i am random text assignment</h1>
+       <div id="body" style="background-color: blue;">
+                 Lorem ipsum dolor sit amet.
+       </div>
+       <button id="btn">randomtext(<span id="count">0</span>)</button>
+       <script>
+        let value=1
+        let btn=document.getElementById('btn')
+        let count=document.getElementById('count')
+        let body=document.getElementById('body')
+        btn.addEventListener('click',()=>{
+            ++value
+            
+            let text="hello"
+            let number=Math.trunc(Math.random()*100000)
+            let result=text+number;
+            body.innerText=result;
+            count.innerText=value
+            if(value>10) body.style.backgroundColor="red"
+
+        })
+       </script>
+</body>
+</html>
