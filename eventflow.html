@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parent2{
+            background-color: aqua;
+            height: 500px;
+            width: 500px;
+        }
+        #parent1{
+            background-color: red;
+            height: 350px;
+            width: 350px;
+            margin: 100px
+        }
+        #child{
+            background-color: yellow;
+            height: 150px;
+            width: 150px;
+            margin:150px
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+         <div id="parent2">
+              <h1>hello i am outer most</h1>
+              <div id="parent1">
+                <h1>hello i am inner</h1>
+                   <div id="child">
+                    <h1>HELLO i am child</h1>
+                   </div>
+              </div>
+         </div>
+         <script>
+            let parent2=document.getElementById('parent2')
+            let parent1=document.getElementById('parent1')
+            let child=document.getElementById('child')
+            parent2.addEventListener('click',(e)=>{
+                e.stopPropagation()
+                console.log('hello i am outer most')
+            },true)
+            parent1.addEventListener('click',(e)=>{
+                
+                console.log('hello i am inner')
+            },true)
+            child.addEventListener('click',(e)=>{
+               
+                console.log('hello i am  child')
+            },true)
+         </script>
+</body>
+</html>
