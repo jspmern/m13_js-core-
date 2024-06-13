@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <h1>modules in js</h1>
+       <script type="module">
+       //import {name,add,calc} from './app.js'  //named import
+       import * as global from './app.js'
+       import printMyName from './app.js'     //default import
+       console.log('hello i am name',global.name)
+       console.log('hello i am add',global.add)
+       console.log(global.calc(4,5,"add"))
+       console.log(global.calc(8,9,"sub"))
+       console.log(global.calc(9,8,"mul"))
+       printMyName()
+       </script>
+</body>
+</html>

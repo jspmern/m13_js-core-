@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <h1>spread oprator</h1>
+       <script>
+                //array
+        let arr=[1,2,3,4,5,6]
+        //copy
+        let result=[...arr]
+        console.log(arr==result) //false
+        //concate
+        let arr2=[6,'fkkg','fgjfghdfh',9]
+        let result1=[...arr,...arr2]
+        console.log(result1)
+
+               //object
+      let details={
+        name:'utsav',
+        add:'delh'
+      }
+      //copy
+    let details1={
+        ...details
+    }
+    //concate   //if key name is same than override is happen with last one
+    let emp={
+        ...details,
+        age:30,
+        name:'vicky'
+
+    }
+    console.log('emp',emp)
+    console.log(details1==details)
+
+    ///important point
+    //array to object is  possible 
+    let arr6=[1,2,3,4,5]
+    let obj={...arr6}
+    console.log(obj)
+    //is object to array not  possible   
+    let obj9={
+        name:"utsav"
+    }
+    //let arr7=[...obj9]
+    //console.log(arr7)
+
+    //string
+    let name="utsav jha"
+    let data=[...name]
+    console.log(data)
+       </script>
+</body>
+</html>

@@ -1,1 +1,22 @@
-let assign=[{name:"sports",url:"https://img.freepik.com/free-photo/sports-tools_53876-138077.jpg?t=st=1717052346~exp=1717055946~hmac=647300f09e275c9e4f7f17770cfb9f6308378747e1a045ee29aca17ef7ffaae5&w=996"},{name:"shoes"},{name:'books'},{name:"electronic"},{name:'cloths'}]
+export let name = "utsav"
+ export let add = "delhi"
+ export let calc = function (a, b, action) {
+    if (action == "add") {
+        return a + b
+    }
+    if (action == "sub") {
+        return a - b
+    }
+    if (action == "mul") {
+        return a * b
+    }
+}
+function print()
+{
+    console.log('my name is utsav')
+}
+
+//default export
+export default print;
+
+//export { name, add,calc }   //named exports

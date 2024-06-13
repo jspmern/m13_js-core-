@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Exception Handling</h1>
+    <script>
+        /*
+        try{
+                 console.log('hello how are you')
+                 consoe.log('i am fine')
+                 console.log('what is your status ')
+                 console.log('i am active')
+        }
+        catch(error)
+        {
+           console.log(error)
+           //this error is a one object that have some property
+           //1.name
+           console.log(error.name)  //name of error
+           //2.message
+           console.log(error.message) //return message of error
+           //3.stack
+           console.log(error.stack) //it return object with msg and name
+        }
+          
+          setTimeout(()=>{
+                try{
+                    consle.log('hello')
+                }
+                catch{
+                    console.log('hello error')
+                }
+                
+            },2000) 
+        */
+
+        function registration(arg) {
+            try {
+                if(!arg.age) throw new Error('must have age')
+                if (arg.age > 18) {
+                    console.log('you are eliglible for vote')
+                }
+            }
+            catch (error) {
+                console.log(error.message)
+            }
+            finally{
+                console.log('hello i am finally')
+            }
+
+
+        }
+        //this data you are getting from backend
+        let res = { name: "utsav", add: 'delhi',age:56 }
+        registration(res)
+
+
+
+
+
+    </script>
+</body>
+
+</html>
