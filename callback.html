@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <h1>callback</h1>
+       <script>
+        /*
+           function regi(cb)
+           {
+            console.log('i am registration')
+            if(true)  cb(showData)
+           }
+           function login(cb)
+           {
+              setTimeout(()=>{
+                console.log('i am login')
+              },2000)
+           
+            if(true) cb()
+           }
+           function showData()
+           {
+            console.log('show data')
+           }
+           regi(login)
+           */
+
+
+           //callback hell
+
+           setTimeout(()=>{
+            console.log('hello1')
+            setTimeout(()=>{
+                console.log('hello2')
+                setTimeout(()=>{
+                    console.log('hello3')
+                    setTimeout(()=>{
+                        console.log('hello4')
+                    },200)
+                })
+            },2000)
+           },1000)
+       </script>
+</body>
+</html>

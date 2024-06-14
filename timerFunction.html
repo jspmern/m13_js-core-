@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>hiii  , i am timer  function </h1>
+        <script>
+           /* console.log('hello1')
+            setTimeout(()=>{
+                console.log('hello2')
+            },2000)
+            console.log('hello3') 
+          console.log('hello1')
+         let x= setTimeout(()=>{console.log('hello2')},2000)
+        let y=  setTimeout(()=>{console.log('hello3')})
+          console.log('hello4')
+         let z= setTimeout(()=>{console.log('hello6')},200)
+        
+          //1,4,3,6,2
+          console.log('x',x)
+          console.log('y',y)
+          console.log('z',z)
+
+          
+         let i=0
+         let z=''
+           while(i<5)
+           {
+          if(z) clearTimeout(z)   
+          z = setTimeout(()=>{
+                console.log('hello')
+            },2000)
+            i++
+           }
+             */
+            let timer=1
+            let intervalId= setInterval(()=>{
+                ++timer
+                console.log('i am timer',timer)
+             },1000)
+
+             setTimeout(()=>{
+                clearInterval(intervalId)
+             },8000)
+
+
+        </script>
+</body>
+</html>
