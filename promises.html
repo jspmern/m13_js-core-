@@ -6,91 +6,56 @@
     <title>Document</title>
 </head>
 <body>
-       <h1>promises</h1>
-       <script>
-        // let x=   new Promise((res,rej)=>{
-        //     let no=Math.trunc(Math.random()*10)
-        //     console.log(no)
-        //     if(no>3)
-        //     {
-        //         res('hello i am resolve')
-        //     }
-        //     else{
-        //         rej('hello i am reject')
-        //     }
-        // })
+      <h1>promises</h1> 
+      <script>
+        //creation
+       /*
+        let p1=  new Promise((resolve,reject)=>{
+              let no=Math.trunc(Math.random()*10)
+              console.log('hello 2')
+              if(no>5)
+              {
+                resolve('fullfill')
+              }
+              else{
+                reject('reject ')
+              }
+         })
+       
+        //consuming
+          p1.then((item)=>{
+            console.log(item)
+        }).catch((err)=>{
+            console.log(err)
+        }) 
+     */
 
-        // x.then((data)=>{
-        //     console.log(data)
-        // })
-        // x.catch((err)=>{
-        //     console.log(err)
-        // })
-        // console.log(x)
-
-    //  function checkMail()
-    //  {
-    //     return new Promise((res,rej)=>{
-    //         let no = Math.trunc(Math.random()*10)
-    //         if(no>5)
-    //         {
-    //             res('mail has arrived')
-    //         }
-    //         else{
-    //             rej('mail has not arrived')
-    //         }
-    //     })
-    //  }
-    //  checkMail().then((item)=>{
-        // console.log(item)
-    //  }).catch((err)=>{
-    //     console.log(err)
-    //  }).finally(()=>{
-    //     console.log('experiment done')
-    //  })
-
-    
-    // console.log('test1')
-    // let p=new Promise((res,rej)=>{
-    //     console.log('test 2')
-    //     if(true)
-    //     {
-    //         res('test3')
-    //         console.log('test4')
-    //     }
-    // })
-    // console.log('test 5')
-    // p.then((item)=>{
-    //     console.log(item)
-    //     console.log('test6')
-    // })
-    // console.log('test7')
-
-
-    console.log('test1')
-    let p=new Promise((res,rej)=>{
-       setTimeout(() => {
-         console.log('test 2')
-       }, 100);
-        if(true)
-        {
-           setTimeout(() => {
-             res('test3')
-           }, 1000);
-            console.log('test4') 
-        }
-    })
-    console.log('test 5')
-    p.then((item)=>{
-       setTimeout(() => {
-         console.log(item)
-       },);
-        console.log('test6')
-    })
-    console.log('test7')
-
-
-
-       </script> 
+     //promises chanining
+     function Calc(arg)
+     {
+        return new Promise((res,rej)=>{
+            if(true)
+            {
+                 setTimeout(()=>{res(arg)},2000) 
+            }
+            else{
+                rej('somthing wrong')
+            }
+        })
+     }
+       Calc(10).then((item)=>{
+        console.log('1st then',item)
+        let x =item *10
+        return Calc(x)
+       }).then((item)=>{
+        console.log('2nd then',item)
+        let y =item *10
+         return Calc(y)
+       }).then((item)=>{
+        console.log('3rd then',item)
+       }).catch(()=>{
+        console.log('hello i am error')
+       })
+      </script>
 </body>
 </html>

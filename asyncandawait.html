@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>async and await in js</h1>
+    <script>
+        let p1 = new Promise((res, rej) => {
+            let no = Math.trunc(Math.random() * 10)
+            if (no > 5) {
+                setTimeout(() => {
+                    res('okay')
+                }, 4000)
+            }
+            else {
+                rej('somthing wrong')
+            }
+
+        })
+        async function print() {
+            try {
+                let result = await p1;
+                console.log(result)
+                console.log('hows are you')
+            }
+            catch (err) {
+                console.log(err)
+            }
+
+
+        }
+        print()
+    </script>
+</body>
+
+</html>
