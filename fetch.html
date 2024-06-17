@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hello i am fetch</h1>
+    <script>
+        //url
+        //http
+        //headers
+        //body
+   /*
+        //step1-done
+        //get method - in get method optionObject is optional
+        let url = 'https://jsonplaceholder.typicode.com/posts'
+        let optionObject = {
+            method: "GET"
+        }
+        //by using promises
+        fetch(url, optionObject).then((item) => {
+            return item.json()  //text()
+        }).then((data) => {
+            console.log(data)
+        }).catch((err) => {
+            console.log(err)
+        })
+
+        //by using async and await
+        async function fetchData() {
+            try {
+                let res = await fetch(url)
+                let data = await res.json()
+                console.log(data, 'by async')
+            }
+            catch (err) {
+                console.log(err)
+            }
+
+        }
+        fetchData() 
+        */
+
+      //************************post********************************
+     let url = 'https://jsonplaceholder.typicode.com/posts'
+     let obj={
+        name:"utsaav",
+        add:"delhi"
+     }
+     let option={
+        method:"POST",
+        body:JSON.stringify(obj)
+     }
+      fetch(url,option).then((item)=>item.json()).then((data)=>console.log(data)).catch(err=>console.log(err))    
+    </script>
+</body>
+
+</html>
